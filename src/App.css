@@ -1,153 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&family=Pacifico&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Montserrat&family=Pacifico&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+Collegiate+One&family=Great+Vibes&family=Montserrat&family=Pacifico&family=Poppins&display=swap');
+
 .App{
-    height: 100vh;
+    height: 100%;
+    background-color: rgba(32, 32, 33, 1);
 }
 
 a {
     text-decoration: none;
-    color: blue;
+    color: rgb(255, 255, 255);
 }
 
 .active {
-    color: red;
+    color: rgb(255, 255, 255);
 }
-/*BLUE RED GOLD*/
+
 .container{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 77%;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 ul{
     margin: o;
     list-style-type: none; ;
 }
+
 p{
     margin: 0;
 }
 
-.Header{
+.Header__display__on{
     display: flex;
+    gap: 30px;
     align-items: center;
-    width: 100%;
-    height: 60px;
-    background: rgba(255, 217, 0, 0.63);
-    box-shadow: 0px 19px 21px 0px rgba(47, 0, 255, 0.69);
 }
 
 .Header__display{
+    transition: 1s;
+    width: 100%;
+    height: 60px;
+    background: rgb(58, 58, 58);
+    border-bottom: 1px solid rgb(99, 99, 99);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    font-family: cursive;
+    color: white;
     display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
-.Header:hover{
-    background-color: gold;
-    box-shadow: 0px 19px 21px 0px rgba(47, 0, 255, 0.69);
+.header__point__logo{
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .Header__logo{
-    margin-left: 30px;
-    height: 65px;
-    width: 85px;
+    height: 63px;
+    width: 90px;
     text-align: center;
 }
 
+.Header__search{
+    width: 210px;
+    height: 30px;
+    border-radius: 6px;
+    background: rgb(100, 99, 99);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
 
-.Header__ul{
-    color: blue;
+.Header__search:hover{
+    transition: .3s;
+    background: grey;
+}
+
+.Header__search__img{
+    width: 15px;
+}
+
+.Header__search input{
+    height: 28px;
+    transition: .3s;
+    border: none;
+    background-color: rgb(100, 99, 99);
+}
+
+.Header__search input:hover{
+    transition: .3s;
+    background: grey;
+}
+
+.Header__search input:focus {
+    outline: none;
+}
+
+.Notifications{
+    display: flex;
+}
+
+.Header__notifications{
+    cursor: pointer;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.Header__notifications:hover{
+    transition: .3s;
+    background: rgba(151, 149, 149, 0.541);
+}
+
+.Header__notifications__img{
+    width: 30px;
+    border-radius: 5px;
+}
+
+.Header__music__img{
+    width: 30px;
+}
+
+.Registration img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.Registration{
+    cursor: pointer;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: .3s;        
+}
+
+.Registration:hover{
+    transition: .3s;
+    background: rgba(151, 149, 149, 0.541);
+}
+
+.Page{
+    display: flex;
+    gap: 31px;
+}
+
+.Side__elements{
+    width: 220px;
+    height: 100%;
+}
+
+.Side__ul{
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 220px;
+    color: rgb(146, 146, 146);
     list-style: none;
     display: flex;
-    gap: 80px;
-    text-align: center;
-    font-family: serif;
+    flex-direction: column;
+    text-align:left;
+    font-family: cursive;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
-    font-size: 1.4em;
-    margin-left: 50px;
+    line-height: 50px;
+    font-size: 1.6em;
+    border-radius: 20px;
 }
 
-.Header__ul li{
+.Side__ul li:hover{
+    color: rgb(0, 0, 0);
+}
+
+.Side__ul li{
     position: relative;
     cursor: pointer;
 }
 
-.Header__ul li::before{
+.Side__ul li::before{
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
-    height: 5px;
+    height: 2px;
     opacity: 0.5;
     transition: .4s;
-    background-color: red;
+    background-color: white;
     border-radius: 100px;
 }
 
-.Header__ul li:hover::before{
+.Side__ul li:hover::before{
     width: 100%;
     opacity: 1;
 }
 
-.Main{
-    position: relative;
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: gold;
+.SideRight{
+    width: 200px;
+    height: 200px;
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
-.Main__background{
-    width: 1349px;
-    position: absolute;
-    z-index: -1;
-}
-
-.movies__block{
-    color: gold;
-    font-family: serif;
-    font-size: 1em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.movies__block{
-    display: flex;
-    gap: 70px;
-}
-
-.Footer{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 100px;
-    color: antiquewhite;
-    background: darkblue;
-    margin-bottom: auto;
-}
-
-.Footer ul{
-    bottom: 0;
-    left: 0;
+.form{
+    margin-top: 10px;
+    width: 553px;
+    height: 250px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    gap: 70px;
-    text-align: center;
-    font-family: serif;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 1.3em;
-    margin-left: 50px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(100, 99, 99);
 }
 
-.Footer__ul li{
+.form h1{
+    margin: 0;
+}
+
+.Main input:nth-child(2){
+    height: 80px;
+    font-size:30px;
+}
+
+.Main button{
+    width: 200px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Main__elements{
+    margin-top: 10px;
+    width: 511px;
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Main__wall__elements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Main__wall__head{
+    display: flex;
+    gap: 15px;
+}
+
+.Main__wall__img{
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
 }
 
-Footer{
-    position: fixed;
+.Main__groupname p:nth-child(1){
+    color: rgb(89, 89, 206);
 }
+
+.Main__groupname p:nth-child(2){
+    color: grey;
+}
+
+.Main__wall__options{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    filter: contrast(0%)
+}
+
+.Main__wall__txt{
+    color: antiquewhite;
+}
+
+.Main__photo{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.Main__wall__footer{
+    display: flex;
+    gap: 25px;
+}
+
+.Wall__react{
+    border-radius: 20px;
+    border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 24px;
+    height: 24px;
+    filter: contrast(25%)
+}
+
+.Wall__react:hover{
+    background-color: aliceblue;
+}
+
+.MyProfile{
+    width: 553px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Friends{
+    width: 553px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Friends__Profile__all{
+    margin-top: 10px;
+    width: 553px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+}
+
+.FriendBlock{
+    display: flex;
+    gap: 20px;
+    height: 120px;
+    align-items: center;
+    color: white;
+    border-bottom: 2px solid grey;
+    border-radius: 20px;
+    transition: 1s;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.FriendBlock:hover{
+    background: gray;
+    transition: .5s;
+}
+
+.FriendBlock img{
+    border-radius: 20px;
+}
+
+.Friendblock__name{
+    display: flex;
+    flex-direction: column;
+    line-height: 10px;
+}
+
+.Friend__Profile__name{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.Messages{
+    position: relative;
+    height: 100vh;
+    max-height: 100%;
+    width: 553px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Messages button{
+    position: absolute;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    background: grey;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 550px;
+    width: 555px;
+}
+
+.Messages textarea{
+    position: fixed;
+    top:500px;
+    width: 553px;
+    font-size: 20px;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    direction: ltr;
+}
+
+.Messages p{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    color: white;
+    line-height: 40px;
+    background-color: grey;
+}
+
+.Notifications{
+    width: 553px;
+}
+
+.Community{
+    width: 553px;
+}
+
+.Videos{
+    width: 553px;
+}
+
+.Games{
+    width: 553px;
+}
+
+.Profile__header{
+    display: flex;
+    gap: 10px;
+}
+
+.Profile__img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.Profile__name h1{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.Profile__name{
+    display: flex;
+    flex-direction: column;
+    line-height: 60px;
+}
+
+.Profile__name h3{
+    margin: 0px;
+    color: rgb(161, 161, 161);
+}
+
+.Profile__name h4{
+    margin: 0px;
+    color: rgb(161, 161, 161);
+}
+
+.Profile__Gallery{
+    border-top: 2px solid grey;
+    padding-top: 20px;
+    margin-top: 20px;
+    height: 150px;
+    display: flex;
+    gap: 10px;
+}
+
+.Profile__Gallery img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.Friends img{
+    width: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.Friends{
+    display: flex;
+    gap: 20px;
+}
+
+.FriendProfile{
+    width: 553px;
+    display: flex;
+    margin-top: 10px;
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 6px 5px -5px rgba(34, 60, 80, 0.6);
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+    color: white;
+}
+
+.FriendProfile img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
