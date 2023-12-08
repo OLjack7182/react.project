@@ -1,6 +1,5 @@
 import '../../App.css';
-import React from 'react';
-import { addMessageActionCreator, updateNewMessageTextActionCreater } from '../../redux/messagesReducer';
+import { addMessageActionCreator, setMessageActionCreator, updateNewMessageTextActionCreater } from '../../redux/messagesReducer';
 import Messages from './Messages';
 import { connect } from 'react-redux';
 
@@ -20,9 +19,13 @@ function mapDispatchToProps(dispatch){
         },
         updateNewMessageText: (text)=>{
             dispatch(updateNewMessageTextActionCreater(text))
+        },
+        setMessages: (messages)=>{
+            dispatch(setMessageActionCreator(messages))
         }
     }
 }
+
 
 let MessagesContainer = connect(mapStateToProps,mapDispatchToProps)(Messages);
 export default MessagesContainer

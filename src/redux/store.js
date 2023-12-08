@@ -39,20 +39,7 @@ let store = {
             }
         ],
         messagesPage:{
-            messages: [
-                {
-                    id: 1,
-                    text: 'Hello world'
-                },
-                {
-                    id: 2,
-                    text: 'Hi'
-                },
-                {
-                    id: 3,
-                    text: 'Im fine'
-                }
-            ],
+            messages: [],
             newMessageText: "",
         }
     },

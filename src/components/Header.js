@@ -7,7 +7,7 @@ function Header() {
                 <div className="container Header__display__on">
                     <div className='header__point__logo'>
                         <NavLink to="/"><img className="Header__logo" src="./images/logo.png" alt="logo"/></NavLink>
-                        <NavLink to="/"><h1>ТопЧарт</h1></NavLink>
+                        <NavLink to="/"><h1>ТопЧат</h1></NavLink>
                     </div>
                     <div className='Header__search'>
                         <img className='Header__search__img' src='./images/search.png'></img>

@@ -30,8 +30,8 @@ function App(props) {
                 <Route path="/MyProfile" element={<MyProfile/>}/>
                 <Route path="/Messages" element={<MessagesContainer/>}/>
                 <Route path="/Notifications" element={<Notifications/>}/>
-                <Route path="/Friends" element={<Friends store = {props.store}/>}/>
-                <Route path="/Friends/:id" element={<FriendProfile store = {props.store}/>}/>
+                <Route path="/Friends" element={<Friends/>}/>
+                <Route path="/Friends/:id" element={<FriendProfile/>}/>
                 <Route path="/Community" element={<Community/>}/>
                 <Route path="/Videos" element={<Videos/>}/>
                 <Route path="/Games" element={<Games/>}/>
