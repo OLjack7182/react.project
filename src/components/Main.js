@@ -1,81 +1,76 @@
 import '../App.css';
-import React from 'react';
-import PageNews from './PageNews';
+import React, { useEffect, } from 'react';
+import PreLoader from '../components/PreLoader'
 
-function Main() {
+function Main(props) {
+    const newNovostiText = React.useRef();
+    
+    function addNovosti (){
+        fetch('http://localhost:8080/novosti',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(props.newNovosti),
+        })
+            .then(response =>{
+                if(!response.ok) {
+                    throw new Error ('Network error');
+                }
+                return response.json();
+            })
+            .then(data =>{
+                props.addNovosti()
+            })
+            .catch(error=>{
+                console.error('Error during POST request:', error.message);
+            })
+        
+    }
 
+    let updateNewNovostiText = () =>{
+        props.updateNewNovostiText(newNovostiText.current.value);
+    }
     return (
         <div className="Main">
-                <div className='Main__Wall'>
-                    <div className='Main__wall'>
-                        <div className='Main__elements'>
-                            <div className='Main__wall__elements'>
-                                <div className='Main__wall__head'>
-                                    <img className='Main__wall__img' src='./images/race.jpg'/>
-                                    <div className='Main__groupname'>
-                                        <p>TopRacing Studio</p>
-                                        <p>Сегодня в 10:00</p>
+            
+            <div className="novostiAdd" action='#'>
+                <textarea ref={newNovostiText} onChange={updateNewNovostiText} value={props.novostiPage.newNovostiText}/>
+                <button onClick={addNovosti} >Отправить</button>
+            </div>
+            {
+                    props.isPreLoad ? <PreLoader/>
+                    :(
+                        props.novostiPage.novosti.map((novosti)=>(
+                            <div className='addNews'>
+                                <div className='Main__Wall' key={novosti.id}>
+                                    <div className='Main__elements'>
+                                        <div className='Main__wall__elements'>
+                                            <div className='Main__wall__head'>
+                                                <img className='Main__wall__img' alt='img' src={novosti.imgIcon}/>
+                                                <div className='Main__groupname'>
+                                                    <p>TopRacing Studio</p>
+                                                    <p>Сегодня в 10:00</p>
+                                                </div>
+                                            </div>
+                                            <img className='Main__wall__options' alt='img' src='./images/options.png'/>
+                                        </div>
+                                        <div className='Main__wall__txt' key={novosti.id}>
+                                            <p>{novosti.novostiText}</p>
+                                        </div>
+                                        <img className='Main__photo' src={novosti.novostiImg}/>
+                                        <div className='Main__wall__footer'>
+                                            <img className='Wall__react' src='./images/like.png'/>
+                                            <img className='Wall__react' src='./images/comment.png'/>
+                                            <img className='Wall__react' src='./images/repost.png'/>
+                                        </div>
                                     </div>
                                 </div>
-                                <img className='Main__wall__options' src='./images/options.png'/>
+                        
                             </div>
-                            <div className='Main__wall__txt'>
-                                <p>Итальянское подразделения Motorsport сообщает, что появляется всё больше фактов об ультиматуме для Серхио Переса. Если он не проявит себя за оставшиеся гонки сезона, то его заменит, скорее всего, Даниэль Риккардо.</p>
-                            </div>
-                            <img className='Main__photo' src='./images/wallphoto.jpg'/>
-                            <div className='Main__wall__footer'>
-                                <img className='Wall__react' src='./images/like.png'/>
-                                <img className='Wall__react' src='./images/comment.png'/>
-                                <img className='Wall__react' src='./images/repost.png'/>
-                            </div>
-                        </div>
-                        <div className='Main__elements'>
-                            <div className='Main__wall__elements'>
-                                <div className='Main__wall__head'>
-                                    <img className='Main__wall__img' src='./images/stanislavskiy.png'/>
-                                    <div className='Main__groupname'>
-                                        <p>Stanislavskiy</p>
-                                        <p>Вчера в 23:30</p>
-                                    </div>
-                                </div>
-                                <img className='Main__wall__options' src='./images/options.png'/>
-                            </div>
-                            <div className='Main__wall__txt'>
-                                <p>Ред Булл окрыляет!<br></br>
-Они кстати сделали специальную ливрею для предстоящего этапа в США.</p>
-                            </div>
-                            <img className='Main__photo' src='./images/wallphoto2.jpg'/>
-                            <div className='Main__wall__footer'>
-                                <img className='Wall__react' src='./images/like.png'/>
-                                <img className='Wall__react' src='./images/comment.png'/>
-                                <img className='Wall__react' src='./images/repost.png'/>
-                            </div>
-                        </div>
-                        <div className='Main__elements'>
-                            <div className='Main__wall__elements'>
-                                <div className='Main__wall__head'>
-                                    <img className='Main__wall__img' src='./images/GasnutOgni.jpg'/>
-                                    <div className='Main__groupname'>
-                                        <p>Гаснут огни</p>
-                                        <p>22 окт в 14:00</p>
-                                    </div>
-                                </div>
-                                <img className='Main__wall__options' src='./images/options.png'/>
-                            </div>
-                            <div className='Main__wall__txt'>
-                                <p>В десять вечера по Москве стартует Гран-При Формулы-1 в Остине!</p>
-                            </div>
-                            <img className='Main__photo' src='./images/Wallphoto3.jpg'/>
-                            <div className='Main__wall__footer'>
-                                <img className='Wall__react' src='./images/like.png'/>
-                                <img className='Wall__react' src='./images/comment.png'/>
-                                <img className='Wall__react' src='./images/repost.png'/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                )))
+            }
         </div>
     );
 }
-
 export default Main;

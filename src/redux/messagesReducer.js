@@ -41,7 +41,7 @@ let messagesReducer = (state = initialState, action) => {
     }
 }
 
-export const setMessageActionCreator = (messages)  => ({type:SET_MESSAGES, messages: messages })
+export const setMessageActionCreator = (messages)  => ({type:SET_MESSAGES, messages: messages})
 
 export const addMessageActionCreator = ()=>({type: ADD_MESSAGE})
 

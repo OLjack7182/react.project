@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "email": "kairat@mail.ru",
+      "password": "$2a$10$Dp1vY6rJmQqS5pw3pmGqEOA.qbimhx7QeiBk6WZKCdwNcFPzO0KNO",
+      "name": "alihk",
+      "surname": "koljhiui",
+      "id": 1
+    },
+    {
+      "email": "oljack@mail.ru",
+      "password": "$2a$10$FVdQ54rfA5Uu9HqmizK/3OUP/spcZM.fnam9trvLio6VUO.g5Z.ru",
+      "name": "ol",
+      "surname": "jack",
+      "born": "род. 7 июля 2002, Махачкала",
+      "id": 2
+    }
+  ],
+  "novosti": [
+    {
+      "imgIcon": "https://f1tracktalk.com/wp-content/uploads/2021/04/P-20171001-00767.jpg",
+      "communityName": "TopRacing Studio",
+      "time": "Сегодня в 10:00",
+      "novostiText": "Итальянское подразделения Motorsport сообщает, что появляется всё больше фактов об ультиматуме для Серхио Переса. Если он не проявит себя за оставшиеся гонки сезона, то его заменит, скорее всего, Даниэль Риккардо.",
+      "novostiImg": "https://f1tracktalk.com/wp-content/uploads/2021/04/P-20171001-00767.jpg",
+      "id": "1"
+    },
+    {
+      "imgIcon": "https://i.pinimg.com/originals/32/c9/0c/32c90c58b9248b11396155be8de569cd.png",
+      "communityName": "communityName 2",
+      "time": "Stanislavskiy",
+      "novostiText": "Победа Феттеля станет единственной победой команды из Фаэнцы до тех пор, пока Пьер Гасли не выиграет на этой же трассе в 2020 году, что делает ее еще более особенной для дочерней команды Red Bull.",
+      "novostiImg": "https://i.ytimg.com/vi/ld7c6ZO4n2A/hqdefault.jpg",
+      "id": "2"
+    },
+    {
+      "imgIcon": "https://frontofficesports.com/wp-content/uploads/2022/12/FOS-22-12.16-F1-Ford-Red-Bull.jpg",
+      "communityName": "Гаснут огни",
+      "time": "22 окт в 14:00",
+      "novostiText": "В десять вечера по Москве стартует Гран-При Формулы-1 в Остине!",
+      "novostiImg": "https://i1.sndcdn.com/artworks-4NZRyIxKvjRuayjW-ql5Abw-t500x500.jpg",
+      "id": "3"
+    }
+  ]
+}

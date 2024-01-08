@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&family=Pacifico&family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Montserrat&family=Pacifico&family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+Collegiate+One&family=Great+Vibes&family=Montserrat&family=Pacifico&family=Poppins&display=swap');
 
 .App{
     height: 100%;
@@ -181,6 +178,7 @@ p{
 
 .Side__ul li:hover{
     color: rgb(0, 0, 0);
+    transition: .3s;
 }
 
 .Side__ul li{
@@ -216,24 +214,8 @@ p{
     border-radius: 20px;
 }
 
-.form{
-    margin-top: 10px;
-    width: 553px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    border: none;
-    border-radius: 20px;
-    background: rgb(100, 99, 99);
-}
 
-.form h1{
-    margin: 0;
-}
+
 
 .Main input:nth-child(2){
     height: 80px;
@@ -272,6 +254,7 @@ p{
     cursor: pointer;
     width: 40px;
     height: 40px;
+    object-fit: cover;
     border-radius: 100px;
 }
 
@@ -296,6 +279,8 @@ p{
 
 .Main__photo{
     width: 100%;
+    height: 340px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
@@ -317,6 +302,8 @@ p{
 .Wall__react:hover{
     background-color: aliceblue;
 }
+
+
 
 .MyProfile{
     width: 553px;
@@ -529,3 +516,41 @@ p{
     border-radius: 20px;
 }
 
+.novostiAdd{
+    margin: 10px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.novostiAdd{
+    position: relative;
+}
+
+.novostiAdd button{
+    border-radius: 20px;
+    background: grey;
+    border: none;
+    cursor: pointer;
+    width: 555px;
+}
+
+.novostiAdd textarea{
+    width: 553px;
+    font-size: 20px;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    direction: ltr;
+}
+
+.novostiAdd p{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    color: white;
+    line-height: 40px;
+    background-color: grey;
+}

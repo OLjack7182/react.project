@@ -1,6 +1,8 @@
 import '../App.css';
 import { NavLink } from "react-router-dom";
+
 function Header() {
+    
     return (
         <div className="Header">    
             <div className="Header__display">
@@ -22,7 +24,7 @@ function Header() {
                         </div>
                     </div>
                     <div className='Registration'>
-                        <img src='./images/log_in.png'></img>
+                        <NavLink to="/Login"><img src='./images/log_in.png'></img></NavLink>
                     </div>
                 </div>
             </div>

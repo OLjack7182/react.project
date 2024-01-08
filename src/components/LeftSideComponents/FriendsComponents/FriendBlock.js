@@ -4,7 +4,7 @@ function FriendBlock(props) {
 
     return (
         <div className="FriendBlock">
-                <img src={`./images/${props.img}`}></img>
+                <img src={props.img}></img>
                 <div className='Friendblock__name'>
                     <h1>{props.name}</h1>
                     <h3>{props.job}</h3>
